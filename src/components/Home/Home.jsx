@@ -1,14 +1,26 @@
 import React from "react"
+import Todos from "../Todos/Todos";
 
-function Home() {
+const dummyTodos = [
+  {
+    id: 1,
+    title: "todos title 1",
+    desc: "todo1 description is here ..."
+  },
+  {
+    id: 2,
+    title: "todos title 2",
+    desc: "todo2 description is here ..."
+  }
+];
 
-    const todos = ["todo1", "todo2", "todo3", "todo4"];
+const Home = () => {
 
   return (
     <>
-        <h1>I am from Home</h1>
+        <Todos todos={dummyTodos} />
     </>
   )
 }
 
-export default Home
+export default Home;
