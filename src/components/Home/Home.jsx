@@ -1,5 +1,7 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react"
 import Todos from "../Todos/Todos";
+import style from "./Home.module.css"
 
 const dummyTodos = [
   {
@@ -17,9 +19,10 @@ const dummyTodos = [
 const Home = () => {
 
   return (
-    <>
+    <div className={style.container}>
+        <h1 style={{color: "white"}}>Todo App</h1>
         <Todos todos={dummyTodos} />
-    </>
+    </div>
   )
 }
 
