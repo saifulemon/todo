@@ -9,7 +9,7 @@ const Todos = (props) => {
         {
             // eslint-disable-next-line react/prop-types
             props.todos.map((todo) => (
-            <Todo key={todo.id} todo={todo}/>
+            <Todo key={todo.id} todo={todo.todo}/>
             ))
         }
     </section>
