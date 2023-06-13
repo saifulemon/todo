@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react"
+import NewTodo from "../Todos/NewTodo";
 import Todos from "../Todos/Todos";
 import style from "./Home.module.css"
 
@@ -21,6 +22,7 @@ const Home = () => {
   return (
     <div className={style.container}>
         <h1 style={{color: "white"}}>Todo App</h1>
+        <NewTodo />
         <Todos todos={dummyTodos} />
     </div>
   )
