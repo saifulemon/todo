@@ -5,6 +5,13 @@ import style from "./Todo.module.css";
 const Todo = (props) => {
   // eslint-disable-next-line react/prop-types
   const { title, desc } = props.todo;
+  // eslint-disable-next-line react/prop-types
+  const { id } = props;
+
+  const handleClick = (id) => {
+    // eslint-disable-next-line no-undef, react/prop-types
+    props.onRemoveItem(id)
+  };
 
   return (
     <article className={style.todo}>
@@ -13,7 +20,7 @@ const Todo = (props) => {
         <p>{desc}</p>
       </div>
       <div>
-        <button className={style.btn}>
+        <button className={style.btn} onClick={() => handleClick(id)}>
           <i className="fa fa-trash fa-2x"></i>
         </button>
       </div>
